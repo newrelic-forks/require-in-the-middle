@@ -1,23 +1,19 @@
-# require-in-the-middle
+# @newrelic/ritm
 
 Hook into the Node.js `require` function. This allows you to modify
 modules on-the-fly as they are being required.
 
-[![npm](https://img.shields.io/npm/v/require-in-the-middle.svg)](https://www.npmjs.com/package/require-in-the-middle)
-[![Test status](https://github.com/elastic/require-in-the-middle/workflows/Test/badge.svg)](https://github.com/elastic/require-in-the-middle/actions)
-
-
 ## Installation
 
 ```
-npm install require-in-the-middle --save
+npm install @newrelic/ritm --save
 ```
 
 ## Usage
 
 ```js
 const path = require('path')
-const { Hook } = require('require-in-the-middle')
+const { Hook } = require('@newrelic/ritm')
 
 // Hook into the express and mongodb module
 new Hook(['express', 'mongodb'], function (exports, name, basedir) {
@@ -35,7 +31,7 @@ new Hook(['express', 'mongodb'], function (exports, name, basedir) {
 
 ## API
 
-The require-in-the-middle module exposes a single function:
+The `@newrelic/ritm` module exposes a single function:
 
 ### `hook = new Hook([modules][, options], onrequire)`
 

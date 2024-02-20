@@ -3,12 +3,12 @@
 const path = require('path')
 const Module = require('module')
 const resolve = require('resolve')
-const debug = require('debug')('require-in-the-middle')
+const debug = require('debug')('ritm')
 const moduleDetailsFromPath = require('module-details-from-path')
 
 // Using the default export is discouraged, but kept for backward compatibility.
 // Use this instead:
-//    const { Hook } = require('require-in-the-middle')
+//    const { Hook } = require('@newrelic/ritm')
 module.exports = Hook
 module.exports.Hook = Hook
 
